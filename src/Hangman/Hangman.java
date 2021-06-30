@@ -3,7 +3,7 @@ package Hangman;
 import java.util.Scanner;
 
 public class Hangman {
-    private static String testRT = "sdfsdaf";
+//test comment
     private static String[] capitalCities = {"RIGA", "PARIS", "BERLIN", "MADRID", "LONDON"};
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
