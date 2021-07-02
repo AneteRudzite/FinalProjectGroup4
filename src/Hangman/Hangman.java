@@ -4,15 +4,11 @@ package Hangman;
 import java.util.Scanner;
 
 public class Hangman {
-//test comment
+
     private static String[] capitalCities = {"RIGA", "PARIS", "BERLIN", "MADRID", "LONDON"};
-<<<<<<< HEAD
+
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
-=======
-    private static String capitalCity; // = capitalCities[(int) (Math.random() * capitalCities.length)];
-    private static String asterisk; //= new String(new char[capitalCity.length()]).replace("\0", "*");
->>>>>>> 2920e3256d000e2eb6cb4847845603196c8adfaf
 
 
     private static int count = 0;
