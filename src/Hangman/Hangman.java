@@ -153,9 +153,9 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
-<<<<<<< HEAD
-}
-=======
+
 }
 
->>>>>>> 2920e3256d000e2eb6cb4847845603196c8adfaf
+
+
+
