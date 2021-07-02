@@ -4,28 +4,42 @@ package Hangman;
 import java.util.Scanner;
 
 public class Hangman {
-
+//test comment
     private static String[] capitalCities = {"RIGA", "PARIS", "BERLIN", "MADRID", "LONDON"};
+<<<<<<< HEAD
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
+=======
+    private static String capitalCity; // = capitalCities[(int) (Math.random() * capitalCities.length)];
+    private static String asterisk; //= new String(new char[capitalCity.length()]).replace("\0", "*");
+>>>>>>> 2920e3256d000e2eb6cb4847845603196c8adfaf
 
 
     private static int count = 0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        char play = 'y';
 
         System.out.println(" Please write your name");
         String player = sc.next();
 
-        while (count < 7 && asterisk.contains("*")) {
-            System.out.println("Guess any letter in the word");
-            System.out.println(asterisk);
-            String guess = sc.next();
-            guess = guess.toUpperCase();
+        while(play == 'y'){
+            capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
+            asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
+            while (count < 7 && asterisk.contains("*")) {
+                System.out.println("Guess any letter in the word");
+                System.out.println(asterisk);
+                String guess = sc.next();
+                guess = guess.toUpperCase();
 
-            hang(guess);
+                hang(guess);
+            }
+            System.out.println("Do you want to play again. y/n");
+            play = sc.next().charAt(0);
+            count = 0;
         }
+
         sc.close();
     }
 
@@ -134,4 +148,9 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 2920e3256d000e2eb6cb4847845603196c8adfaf
