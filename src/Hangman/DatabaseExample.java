@@ -29,10 +29,18 @@ public class DatabaseExample {
             //STEP 3: Execute a query
             System.out.println("Creating table in given database...");
             stmt = conn.createStatement();
-            String sql =  "CREATE TABLE   IF NOT EXISTS HANGMAN " +
-                    " (name VARCHAR(255), " +
-                    " guess VARCHAR(255)) ";                                       ;
+            String sql =  "CREATE TABLE if not exists HANGMAN" +
+                    "  (" +
+                    "     id   INT PRIMARY KEY NOT NULL AUTO_INCREMENT ," +
+                    "     name VARCHAR(255)," +
+                    "     guess VARCHAR(255)" +
+                    "  ); " ;
 
+               /*     +
+                    "  ((id int )," +
+                    " (name VARCHAR(255), " +
+                    " (guess VARCHAR(255)) ";                                       ;
+*/
             stmt.executeUpdate(sql);
             System.out.println("Created table in given database...");
 

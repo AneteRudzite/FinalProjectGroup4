@@ -15,10 +15,12 @@ public class Hangman {
         Scanner sc = new Scanner(System.in);
         char play = 'y';
 
+
+
         System.out.println(" Please write your name");
        String player = sc.next();
 
-        while(play == 'y'){
+        while(play == 'y') {
             capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
             asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
             while (count < 7 && asterisk.contains("*")) {
@@ -29,10 +31,17 @@ public class Hangman {
 
                 hang(guess);
             }
+
             System.out.println("Do you want to play again. y/n");
             play = sc.next().charAt(0);
-            count = 0;
+
+            if (play == 'y') {
+                System.out.println(" Please write your name");
+                player = sc.next();
+                count = 0;
+            }
         }
+
 
         sc.close();
     }

@@ -28,7 +28,7 @@ public class DatabaseValues extends Hangman{ //???
 
             // STEP 3: Execute a query
             stmt = conn.createStatement();
-           String sql = "INSERT INTO Hangman " + "VALUES (' player', ' capitalCity ')";
+           String sql = "INSERT INTO Hangman " + "VALUES ('id', ' player', ' capitalCity ')";
 ////
             stmt.executeUpdate(sql);
 //            sql = "INSERT INTO Registration " + "VALUES (101, 'Mahnaz', 'Fatma', 25)";
