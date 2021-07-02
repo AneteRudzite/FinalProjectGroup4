@@ -1,3 +1,4 @@
+
 package Hangman;
 
 import java.util.Scanner;
@@ -7,7 +8,7 @@ public class Hangman {
     private static String[] capitalCities = {"RIGA", "PARIS", "BERLIN", "MADRID", "LONDON"};
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
-    
+
 
     private static int count = 0;
 
@@ -15,7 +16,7 @@ public class Hangman {
         Scanner sc = new Scanner(System.in);
 
         System.out.println(" Please write your name");
-       String player = sc.next();
+        String player = sc.next();
 
         while (count < 7 && asterisk.contains("*")) {
             System.out.println("Guess any letter in the word");
