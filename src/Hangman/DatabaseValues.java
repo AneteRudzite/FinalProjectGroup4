@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DatabaseValues extends Hangman{ //???
+public class DatabaseValues {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
     static final String DB_URL = "jdbc:h2:~/test";
@@ -28,18 +28,10 @@ public class DatabaseValues extends Hangman{ //???
 
             // STEP 3: Execute a query
             stmt = conn.createStatement();
-           String sql = "INSERT INTO Hangman " + "VALUES ('id', ' player', ' capitalCity ')";
-////
+           String sql = "INSERT INTO Hangman (NAME, GUESS)" + "VALUES (' player' , ' capitalCity ')";
+
             stmt.executeUpdate(sql);
-//            sql = "INSERT INTO Registration " + "VALUES (101, 'Mahnaz', 'Fatma', 25)";
-//
-//            stmt.executeUpdate(sql);
-//            sql = "INSERT INTO Registration " + "VALUES (102, 'Zaid', 'Khan', 30)";
-//
-//            stmt.executeUpdate(sql);
-//            sql = "INSERT INTO Registration " + "VALUES(103, 'Sumit', 'Mittal', 28)";
-//
-//            stmt.executeUpdate(sql);
+
             System.out.println("Inserted records into the table...");
 
             // STEP 4: Clean-up environment
@@ -65,4 +57,5 @@ public class DatabaseValues extends Hangman{ //???
         } // end try
         System.out.println("Goodbye!");
     }
+
 }
