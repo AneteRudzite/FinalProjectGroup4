@@ -24,6 +24,7 @@ public class Hangman {
 
         while(play == 'y') {
             capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
+            DatabaseValues.main(new String[] {player, capitalCity});
             asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
             while (count < 7 && asterisk.contains("*")) {
                 System.out.println("Guess any letter in the word");

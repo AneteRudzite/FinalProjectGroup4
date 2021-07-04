@@ -28,7 +28,7 @@ public class DatabaseValues {
 
             // STEP 3: Execute a query
             stmt = conn.createStatement();
-           String sql = "INSERT INTO Hangman (NAME, GUESS)" + "VALUES (' player' , ' capitalCity ')";
+           String sql = "INSERT INTO Hangman (NAME, GUESS)" + "VALUES ('"+args[0]+"' , '"+args[1]+" ')";
 
             stmt.executeUpdate(sql);
 
