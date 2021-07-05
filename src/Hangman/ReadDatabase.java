@@ -61,6 +61,5 @@ public class ReadDatabase {
 
         }
 
-        System.out.println("Goodbye!");
     }
 }

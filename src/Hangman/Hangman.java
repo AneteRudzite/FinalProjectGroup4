@@ -47,15 +47,12 @@ public class Hangman {
                 Matcher matcher = pattern.matcher(guess);
 
                 if (matcher.matches()) {
-                    System.out.println("Right");
+                    hang(guess);
                 } else {
-                    System.out.println("Wrong");
+                    System.out.println("Please enter correct symbol A-Z");
                 }
 
 
-
-
-                hang(guess);
             }
 
             System.out.println("Do you want to play again. y/n");
@@ -73,22 +70,22 @@ public class Hangman {
 }
 
     public static void hang(String guess) {
-        String newasterisk = "";
+        String newAsterisk = "";
         for (int i = 0; i < capitalCity.length(); i++) {
             if (capitalCity.charAt(i) == guess.charAt(0)) {
-                newasterisk += guess.charAt(0);
+                newAsterisk += guess.charAt(0);
             } else if (asterisk.charAt(i) != '*') {
-                newasterisk += capitalCity.charAt(i);
+                newAsterisk += capitalCity.charAt(i);
             } else {
-                newasterisk += "*";
+                newAsterisk += "*";
             }
         }
 
-        if (asterisk.equals(newasterisk)) {
+        if (asterisk.equals(newAsterisk)) {
             count++;
             hangmanImage();
         } else {
-            asterisk = newasterisk;
+            asterisk = newAsterisk;
         }
         if (asterisk.equals(capitalCity)) {
             System.out.println("Correct! You win! The word was " + capitalCity);

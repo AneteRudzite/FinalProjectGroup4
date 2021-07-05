@@ -65,7 +65,6 @@ public class DatabaseExample {
                 se.printStackTrace();
             } //end finally try
         } //end try
-        System.out.println("Goodbye!");
 
         }
     }
