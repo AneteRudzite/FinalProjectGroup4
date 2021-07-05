@@ -4,10 +4,7 @@ package Hangman;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-<<<<<<< HEAD
 
-=======
->>>>>>> dd6e36366df036bdb875e6e9aa765d54a8caef72
 
 public class Hangman {
 
@@ -16,10 +13,6 @@ public class Hangman {
             "BUDAPEST", "REYKJAVIK", "DUBLIN", "ROME", "PRISTINA", "VADUZ", "VILNIUS", "LUXEMBOURG", "SKOPJE", "VALLETTA",
             "CHISINAU", "MONACO", "PODGORICA", "AMSTERDAM", "WARSAW", "LISBON", "BUCHAREST", "MOSCOW", "BELGRADE", "BRATISLAVA",
             "LJUBLJANA", "STOCKHOLM", "BERN", "ANKARA"};
-<<<<<<< HEAD
-
-=======
->>>>>>> dd6e36366df036bdb875e6e9aa765d54a8caef72
 
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
