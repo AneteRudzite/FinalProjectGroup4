@@ -20,7 +20,7 @@ public class Hangman {
         System.out.println(" Please write your name");
         String player = sc.next();
 
-        while(play == 'y'){
+        while (play == 'y') {
             capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
             asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
             while (count < 7 && asterisk.contains("*")) {
@@ -61,6 +61,7 @@ public class Hangman {
             System.out.println("Correct! You win! The word was " + capitalCity);
         }
     }
+
     public static void hangmanImage() {
         if (count == 1) {
             System.out.println("Wrong guess, try again");
@@ -144,9 +145,5 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> 2920e3256d000e2eb6cb4847845603196c8adfaf
