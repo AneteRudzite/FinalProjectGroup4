@@ -2,10 +2,16 @@
 package Hangman;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Hangman {
 
-    private static String[] capitalCities = {"RIGA", "PARIS", "BERLIN", "MADRID", "LONDON"};
+    private static String[] capitalCities = {"RIGA", "ATHENS", "OSLO",  "PARIS", "BERLIN", "MADRID", "LONDON", "TIRANA",
+            "VIENNA", "MINSK", "BRUSSELS", "SARAJEVO", "SOFIA", "ZAGREB", "PRAGUE", "COPENHAGEN", "TALLINN", "HELSINKI",
+            "BUDAPEST", "REYKJAVIK", "DUBLIN", "ROME", "PRISTINA", "VADUZ", "VILNIUS", "LUXEMBOURG", "SKOPJE", "VALLETTA",
+            "CHISINAU", "MONACO", "PODGORICA", "AMSTERDAM", "WARSAW", "LISBON", "BUCHAREST", "MOSCOW", "BELGRADE", "BRATISLAVA",
+            "LJUBLJANA", "STOCKHOLM", "BERN", "ANKARA"};
 
     private static String capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
     private static String asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
@@ -18,20 +24,30 @@ public class Hangman {
         char play = 'y';
 
 
-
+        System.out.println("Hello! You have to guess any capital city of Europe.");
         System.out.println(" Please write your name");
         String player = sc.next();
 
-<<<<<<< HEAD
         while (play == 'y') {
-=======
+
         while(play == 'y') {
->>>>>>> c63de764495c7dacea524d5b715e5aff0917399b
+
             capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
             DatabaseValues.main(new String[] {player, capitalCity});
             asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
             while (count < 7 && asterisk.contains("*")) {
                 System.out.println("Guess any letter in the word");
+
+                Pattern pattern = Pattern.compile("[A-Z]{2}-[0-9]{4}");
+                Matcher matcher = pattern.matcher(guess);
+
+                if (matcher.matches()) {
+                    System.out.println("Right");
+                } else {
+                    System.out.println("Wrong");
+                }
+
+
                 System.out.println(asterisk);
                 String guess = sc.next();
                 guess = guess.toUpperCase();
@@ -159,14 +175,13 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
-<<<<<<< HEAD
-}
-
-=======
 
 }
 
 
+}
 
 
->>>>>>> c63de764495c7dacea524d5b715e5aff0917399b
+
+
+
