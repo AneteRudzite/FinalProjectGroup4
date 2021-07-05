@@ -38,16 +38,6 @@ public class Hangman {
             while (count < 7 && asterisk.contains("*")) {
                 System.out.println("Guess any letter in the word");
 
-                Pattern pattern = Pattern.compile("[A-Z]{2}-[0-9]{4}");
-                Matcher matcher = pattern.matcher(guess);
-
-                if (matcher.matches()) {
-                    System.out.println("Right");
-                } else {
-                    System.out.println("Wrong");
-                }
-
-
                 System.out.println(asterisk);
                 String guess = sc.next();
                 guess = guess.toUpperCase();
@@ -64,10 +54,10 @@ public class Hangman {
                 count = 0;
             }
         }
-
-
         sc.close();
     }
+
+}
 
     public static void hang(String guess) {
         String newasterisk = "";
@@ -175,8 +165,6 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
-
-}
 
 
 }

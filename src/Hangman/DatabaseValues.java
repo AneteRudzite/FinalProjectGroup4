@@ -5,11 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-<<<<<<< HEAD
-public class DatabaseValues extends Hangman{
-=======
 public class DatabaseValues {
->>>>>>> c63de764495c7dacea524d5b715e5aff0917399b
+
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
     static final String DB_URL = "jdbc:h2:~/test";
