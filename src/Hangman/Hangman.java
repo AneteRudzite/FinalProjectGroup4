@@ -17,11 +17,18 @@ public class Hangman {
         Scanner sc = new Scanner(System.in);
         char play = 'y';
 
+
+
         System.out.println(" Please write your name");
         String player = sc.next();
 
+<<<<<<< HEAD
         while (play == 'y') {
+=======
+        while(play == 'y') {
+>>>>>>> c63de764495c7dacea524d5b715e5aff0917399b
             capitalCity = capitalCities[(int) (Math.random() * capitalCities.length)];
+            DatabaseValues.main(new String[] {player, capitalCity});
             asterisk = new String(new char[capitalCity.length()]).replace("\0", "*");
             while (count < 7 && asterisk.contains("*")) {
                 System.out.println("Guess any letter in the word");
@@ -31,10 +38,17 @@ public class Hangman {
 
                 hang(guess);
             }
+
             System.out.println("Do you want to play again. y/n");
             play = sc.next().charAt(0);
-            count = 0;
+
+            if (play == 'y') {
+                System.out.println(" Please write your name");
+                player = sc.next();
+                count = 0;
+            }
         }
+
 
         sc.close();
     }
@@ -145,5 +159,14 @@ public class Hangman {
             System.out.println("GAME OVER! The word was " + capitalCity);
         }
     }
+<<<<<<< HEAD
 }
 
+=======
+
+}
+
+
+
+
+>>>>>>> c63de764495c7dacea524d5b715e5aff0917399b
