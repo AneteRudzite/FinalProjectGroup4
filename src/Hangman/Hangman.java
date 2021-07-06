@@ -66,7 +66,9 @@ public class Hangman {
         }
         sc.close();
     }
-
+        //prints out all rows from hangman table
+        System.out.println("Your game history:");
+        new ReadDatabase().main(new String[] {});
 }
 
     public static void hang(String guess) {
