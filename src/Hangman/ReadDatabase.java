@@ -22,9 +22,7 @@ public class ReadDatabase {
 
         try {
             Class.forName("org.h2.Driver");
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
-            System.out.println("Connected database successfully...");
             stmt = conn.createStatement();
             String sql = "SELECT id, name, guess from HANGMAN";
             ResultSet rs = stmt.executeQuery(sql);

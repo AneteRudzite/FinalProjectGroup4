@@ -61,6 +61,7 @@ public class Hangman {
             if (play == 'y') {
                 System.out.println(" Please write your name");
                 player = sc.next();
+                player=player.toUpperCase();
                 count = 0;
             }
         }
@@ -68,6 +69,8 @@ public class Hangman {
     }
         //prints out all rows from hangman table
         System.out.println("Your game history:");
+        System.out.println("Connecting to database...");
+        System.out.println("Connected database successfully...");
         new ReadDatabase().main(new String[] {});
 }
 
