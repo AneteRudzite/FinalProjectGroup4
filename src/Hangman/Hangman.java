@@ -28,6 +28,7 @@ public class Hangman {
         System.out.println("Hello! You have to guess any capital city of Europe.");
         System.out.println(" Please write your name");
         String player = sc.next();
+        player=player.toUpperCase();
 
         while (play == 'y') {
 
